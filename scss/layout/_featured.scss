@@ -1,0 +1,32 @@
+
+.featured{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.feature-heading{
+  width: 100%;
+  text-align: center;
+}
+
+.cards{
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  padding: 5% 15%;
+  justify-content: center;
+}
+.card{
+  display: flex;
+  flex-flow: column wrap;
+  flex-basis: 85%;
+  align-items: center;
+}
+
+@media #{$charmeleon}{
+  .card{
+    flex-basis: 33%;
+    flex-grow: 1;
+    text-align: center;
+  }
+}

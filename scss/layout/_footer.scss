@@ -1,0 +1,21 @@
+.footer{
+  width: 100vw;
+  background-color:lightblue;
+  color: #fff;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  & ul{
+
+    list-style: none;
+    display: flex;
+    flex-flow: row no-wrap;
+    justify-content: space-around;
+  }
+  & ul:first-of-type{
+    width: 100%;
+    flex-flow: column wrap;
+    align-items: center;
+
+  }
+}
