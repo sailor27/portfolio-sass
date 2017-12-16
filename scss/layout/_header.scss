@@ -3,7 +3,7 @@
 // *:not(body):not(html):not(button) {
 //   box-sizing:border-box;
 // }
-body{
+html > *{
   box-sizing:border-box;
   margin: 0;
 }

@@ -9,15 +9,34 @@ button {
   font-size: 1.25em;
   color: #fff;
   text-transform: uppercase;
-  transition:all 0.3s ease-in-out;
-  &:before, &:after{
-    content:'';
-    position: absolute;
-
-  }
+  position: relative;
   &:hover{
     background-color: #fff;
     color: $brightblue;
+    text-shadow: 1.25px 1.25px $brightpurple;
+  }
+  &:hover:before, &:hover:after{
+    width:calc(100% + 12px);
+    height:calc(100% + 12px);
+  }
+  &:before, &:after{
+    content:'';
+    position: absolute;
+    display: block;
+    width: 0.25em;
+    height: 0.25em;
+    border: 3px solid $brightblue;
+    transition:all 0.3s ease-in-out;
+  }
+  &:before{
+    top: -7px;
+    left: -7px;
+    border-width:2px 0 0 2px;
+  }
+  &:after{
+    bottom: -7px;
+    right: -7px;
+    border-width:0 2px 2px 0;
   }
 }
 @media #{$charmeleon}{

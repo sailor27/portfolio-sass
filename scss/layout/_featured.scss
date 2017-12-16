@@ -22,11 +22,12 @@
   width: 100%;
   padding: 5% 15%;
   justify-content: center;
+  padding: auto 2%;
   & .icon{
     display: flex;
     flex-flow: column;
     justify-content: center;
-    border: 2px solid #000;
+    border: 3px solid #000;
     border-radius: 50%;
     padding: 3%;
   }
@@ -36,6 +37,17 @@
   flex-flow: column wrap;
   flex-basis: 85%;
   align-items: center;
+  & p{
+    text-align: center;
+  }
+  &:hover{
+    h3{
+      color:$brightpurple;
+    }
+    .icon{
+      border: 3px solid $brightpurple;
+    }
+  }
 }
 
 @media #{$charmeleon}{
