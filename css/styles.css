@@ -26,7 +26,7 @@ button {
   text-transform: uppercase;
   position: relative; }
   button:hover {
-    background-color: #fff;
+    background-color: #00000070;
     color: #0ac2ff;
     text-shadow: 1.25px 1.25px #ae84ff; }
   button:hover:before, button:hover:after {
@@ -94,6 +94,12 @@ h1 {
       margin: 0 1em;
       font-style: bold; }
 
+.grow li:hover {
+  animation: growIn 1s ease-in-out; }
+  .grow li:hover a {
+    color: #0ac2ff;
+    background-color: #000; }
+
 .center {
   height: 55vh;
   display: flex;
@@ -105,6 +111,15 @@ h1 {
   object-fit: cover;
   background-blend-mode: darken; }
 
+@keyframes growIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.5; }
+  40% {
+    transform: scale(2);
+    opacity: 1; }
+  100% {
+    transform: scale(1); } }
 .hero {
   display: flex;
   flex-direction: column;

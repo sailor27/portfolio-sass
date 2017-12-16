@@ -50,6 +50,15 @@ h1{
     }
   }
 }
+.grow{
+  & li:hover{
+  animation: growIn 1s ease-in-out;
+    & a{
+      color: $brightblue;
+      background-color: #000;
+    }
+  }
+}
 // hero image
 .center{
   height: 55vh;
@@ -59,4 +68,17 @@ h1{
   background-image: url("../img/scott-webb-271924.jpg");
   @include background;
   background-blend-mode: darken;
+}
+@keyframes growIn {
+  0%{
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+  40%{
+    transform: scale(2);
+    opacity: 1;
+  }
+  100%{
+    transform: scale(1);
+  }
 }
