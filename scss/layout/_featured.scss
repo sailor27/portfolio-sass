@@ -2,11 +2,18 @@
 .featured{
   display: flex;
   flex-flow: row wrap;
+  & h3{
+    font-size: 1.5em;
+  }
+  & h5{
+    font-size: 1em;
+  }
 }
 
 .feature-heading{
   width: 100%;
   text-align: center;
+  margin: 0 5%;
 }
 
 .cards{
@@ -15,6 +22,14 @@
   width: 100%;
   padding: 5% 15%;
   justify-content: center;
+  & .icon{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    border: 2px solid #000;
+    border-radius: 50%;
+    padding: 3%;
+  }
 }
 .card{
   display: flex;
@@ -24,6 +39,14 @@
 }
 
 @media #{$charmeleon}{
+  .featured{
+    & h5{
+      font-size: 1.25em;
+    }
+    & h3{
+      font-size: 1.75em;
+    }
+  }
   .card{
     flex-basis: 33%;
     flex-grow: 1;

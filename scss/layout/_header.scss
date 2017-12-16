@@ -1,10 +1,10 @@
 /* For testing only */
 
-*:not(body):not(html):not(button) {
-  box-sizing:border-box;
-  border:1px dashed #000;
-}
+// *:not(body):not(html):not(button) {
+//   box-sizing:border-box;
+// }
 body{
+  box-sizing:border-box;
   margin: 0;
 }
 
@@ -29,11 +29,9 @@ nav{
     margin: 0;
   }
 }
-
 h1{
   color: #fff;
 }
-
 .links{
   display: flex;
   justify-content: center;
@@ -44,6 +42,12 @@ h1{
     flex-flow: row wrap;
     list-style: none;
     justify-content: space-between;
+    & a{
+      color: #fff;
+      text-transform: uppercase;
+      margin: 0 1em;
+      font-style: bold;
+    }
   }
 }
 // hero image
@@ -54,5 +58,5 @@ h1{
   align-items: center;
   background-image: url("../img/scott-webb-271924.jpg");
   @include background;
-
+  background-blend-mode: darken;
 }

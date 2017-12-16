@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  // justify-content: space-around;
   height: 65vh;
   padding-bottom: 8%;
   & > h1, h5{
@@ -10,15 +9,32 @@
     display: flex;
   }
   & h1{
-    font-size: 5em;
+    font-size: 4.75em;
+    animation: fadeIn 500ms ease initial;
   }
   & h5{
     font-size: 1.5em;
+    color: #fff;
   }
 }
 
 @media #{$charmeleon}{
+  .hero h1{
+      font-size: 5em;
+    }
   .hero h5{
-    font-size: 2em;
+      font-size: 2em;
+    }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  20%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
   }
 }

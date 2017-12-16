@@ -8,28 +8,36 @@ h4 {
 h5, p {
   font-family: 'Montserrat', sans-serif; }
 
+a {
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  color: #fff; }
+
 button {
-  width: 30%;
+  width: 41%;
   min-height: 50px;
   border: 3px solid #fff;
   border-radius: 2%;
-  padding: 2%;
   background-color: transparent;
   font-family: Montserrat;
   font-weight: bold;
   font-size: 1.25em;
   color: #fff;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out; }
+  button:before, button:after {
+    content: '';
+    position: absolute; }
   button:hover {
     background-color: #fff;
-    color: magenta; }
+    color: #03a0d4; }
 
+@media only screen and (min-width: 770px) {
+  button {
+    width: 30%; } }
 /* For testing only */
-*:not(body):not(html):not(button) {
-  box-sizing: border-box;
-  border: 1px dashed #000; }
-
 body {
+  box-sizing: border-box;
   margin: 0; }
 
 .wrapper {
@@ -63,6 +71,11 @@ h1 {
     flex-flow: row wrap;
     list-style: none;
     justify-content: space-between; }
+    .links ul a {
+      color: #fff;
+      text-transform: uppercase;
+      margin: 0 1em;
+      font-style: bold; }
 
 .center {
   height: 55vh;
@@ -72,7 +85,8 @@ h1 {
   background-image: url("../img/scott-webb-271924.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  object-fit: cover; }
+  object-fit: cover;
+  background-blend-mode: darken; }
 
 .hero {
   display: flex;
@@ -84,20 +98,37 @@ h1 {
     text-align: center;
     display: flex; }
   .hero h1 {
-    font-size: 5em; }
+    font-size: 4.75em;
+    animation: fadeIn 500ms ease initial; }
   .hero h5 {
-    font-size: 1.5em; }
+    font-size: 1.5em;
+    color: #fff; }
 
 @media only screen and (min-width: 770px) {
+  .hero h1 {
+    font-size: 5em; }
+
   .hero h5 {
     font-size: 2em; } }
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  20% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 .featured {
   display: flex;
   flex-flow: row wrap; }
+  .featured h3 {
+    font-size: 1.5em; }
+  .featured h5 {
+    font-size: 1em; }
 
 .feature-heading {
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  margin: 0 5%; }
 
 .cards {
   display: flex;
@@ -105,6 +136,13 @@ h1 {
   width: 100%;
   padding: 5% 15%;
   justify-content: center; }
+  .cards .icon {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    border: 2px solid #000;
+    border-radius: 50%;
+    padding: 3%; }
 
 .card {
   display: flex;
@@ -113,22 +151,33 @@ h1 {
   align-items: center; }
 
 @media only screen and (min-width: 770px) {
+  .featured h5 {
+    font-size: 1.25em; }
+  .featured h3 {
+    font-size: 1.75em; }
+
   .card {
     flex-basis: 33%;
     flex-grow: 1;
     text-align: center; } }
 .footer {
   width: 100vw;
-  background-color: lightblue;
+  background-color: #03a0d4;
   color: #fff;
   display: flex;
   flex-flow: column wrap;
   align-items: center; }
+  .footer .logo {
+    display: flex; }
   .footer ul {
     list-style: none;
     display: flex;
-    flex-flow: row no-wrap;
-    justify-content: space-around; }
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content: center; }
+    .footer ul img {
+      max-width: 50px;
+      margin-right: 15%; }
   .footer ul:first-of-type {
     width: 100%;
     flex-flow: column wrap;
