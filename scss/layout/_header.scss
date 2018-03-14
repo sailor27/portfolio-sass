@@ -61,11 +61,11 @@ h1{
 }
 // hero image
 .center{
-  height: 55vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("../img/scott-webb-271924.jpg");
+  background-image: url("../img/custom-memphis.png");
   @include background;
   background-blend-mode: darken;
 }
