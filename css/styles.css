@@ -79,9 +79,6 @@ nav {
   .logo > h1, .logo h4 {
     margin: 0; }
 
-h1 {
-  color: #589CB3; }
-
 .links {
   display: flex;
   justify-content: center;
@@ -109,11 +106,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(rgba(250, 0, 0, 0.1), rgba(250, 0, 0, 0.1)), url("../assets/img/custom-memphis2.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  object-fit: cover;
-  background-blend-mode: darken; }
+  background-color: #589CB3; }
 
 @keyframes growIn {
   0% {
@@ -125,21 +118,21 @@ h1 {
   100% {
     transform: scale(1); } }
 .hero {
+  height: 50%;
+  margin: 120px 15px 10px 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 65vh;
   justify-content: space-around; }
   .hero > h1, .hero h5 {
     text-align: center;
-    display: flex; }
+    color: #FFF;
+    margin: 0px; }
   .hero h1 {
     font-size: 4.75em;
     animation: fadeIn 500ms ease initial; }
   .hero h5 {
-    font-size: 1.5em;
-    color: #fff;
-    margin: 0px 200px; }
+    font-size: 1.5em; }
 
 @media only screen and (min-width: 770px) {
   .hero h1 {
@@ -156,7 +149,12 @@ h1 {
     opacity: 1; } }
 .featured {
   display: flex;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+  justify-content: center;
+  background-image: url("../assets/img/custom-memphis3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover; }
   .featured h3 {
     font-size: 1.5em; }
   .featured h5 {
@@ -167,33 +165,61 @@ h1 {
   text-align: center;
   margin: 0 5%; }
 
-.cards {
+#react {
+  background-color: #fbe280; }
+  #react .desc {
+    background-color: #F9D74F; }
+
+#angular {
+  background-color: #d097d0; }
+  #angular .desc {
+    background-color: #C074C0; }
+
+.projects {
+  width: 75%;
   display: flex;
   flex-flow: row wrap;
-  width: 100%;
-  padding: 5% 15%;
-  justify-content: center;
-  padding: auto 2%; }
-  .cards .icon {
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 15px;
+  justify-content: center; }
+  .projects .icon {
     display: flex;
     flex-flow: column;
-    background: url("../assets/img/TLL.png");
-    background-size: cover;
-    width: 300px;
-    height: 300px;
+    background: #fff;
+    max-width: 180px;
+    max-height: 180px;
     justify-content: center;
     border: 3px solid #000;
-    border-radius: 50%;
-    padding: 3%; }
+    border-radius: 50%; }
+  .projects .cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center; }
 
 .card {
   display: flex;
   flex-flow: column wrap;
+  justify-content: space-around;
   flex-basis: 85%;
+  max-width: 300px;
+  height: 300px;
   align-items: center; }
+  .card .desc {
+    padding: 5px;
+    border-radius: 5px; }
+  .card .link {
+    background-color: #FFF;
+    border: 3px solid #000;
+    border-radius: 5px; }
+    .card .link:hover {
+      box-shadow: 8px 8px; }
+    .card .link h5 {
+      margin: 0px;
+      padding: 10px; }
   .card p {
     text-align: center; }
-  .card:hover h3 {
+  .card:hover h5 {
     color: #C074C0; }
   .card:hover .icon {
     border: 3px solid #C074C0; }
