@@ -30,7 +30,7 @@ nav{
   }
 }
 h1{
-  color: #fff;
+  color: $primary;
 }
 .links{
   display: flex;
@@ -43,7 +43,7 @@ h1{
     list-style: none;
     justify-content: space-between;
     & a{
-      color: #fff;
+      color: black;
       text-transform: uppercase;
       margin: 0 1em;
       font-style: bold;
@@ -65,7 +65,9 @@ h1{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("../img/custom-memphis.png");
+	background: linear-gradient(
+      rgba(250, 0, 0, 0.10),rgba(250, 0, 0, 0.10)), url("../assets/img/custom-memphis2.png");
+  // background-image: url("../assets/img/custom-memphis2.png");
   @include background;
   background-blend-mode: darken;
 }
