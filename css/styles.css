@@ -32,7 +32,7 @@ button {
   button:hover {
     background-color: #00000070;
     color: #589CB3;
-    text-shadow: 1.25px 1.25px #B8B42D; }
+    text-shadow: 1.25px 1.25px #FFF; }
   button:hover:before, button:hover:after {
     width: calc(100% + 12px);
     height: calc(100% + 12px); }
@@ -177,6 +177,10 @@ h1 {
   .cards .icon {
     display: flex;
     flex-flow: column;
+    background: url("../assets/img/TLL.png");
+    background-size: cover;
+    width: 300px;
+    height: 300px;
     justify-content: center;
     border: 3px solid #000;
     border-radius: 50%;
@@ -190,9 +194,9 @@ h1 {
   .card p {
     text-align: center; }
   .card:hover h3 {
-    color: #ae84ff; }
+    color: #C074C0; }
   .card:hover .icon {
-    border: 3px solid #ae84ff; }
+    border: 3px solid #C074C0; }
 
 @media only screen and (min-width: 770px) {
   .featured h5 {
@@ -211,6 +215,8 @@ h1 {
   display: flex;
   flex-flow: column wrap;
   align-items: center; }
+  .footer h1 {
+    color: #fff; }
   .footer > div, .footer ul {
     text-align: center; }
   .footer ul {
