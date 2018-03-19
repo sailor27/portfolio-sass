@@ -4,6 +4,9 @@
   flex-flow: row wrap;
 	justify-content: center;
 	background-image: url("../assets/img/custom-memphis3.png");
+	& h1 {
+		font-size: 2.5em;
+	}
   & h3{
     font-size: 1.5em;
   }
@@ -27,15 +30,15 @@
 	}
 }
 #angular {
-	background-color: lighten($secondary, $tint-saturation-amt);
-	& .desc {
-		background-color: $secondary;
-	}
-}
-#sass {
 	background-color: lighten($primary, $tint-saturation-amt);
 	& .desc {
 		background-color: $primary;
+	}
+}
+#sass {
+	background-color: lighten($secondary, $tint-saturation-amt);
+	& .desc {
+		background-color: $secondary;
 	}
 }
 
@@ -54,8 +57,8 @@
 		padding: 3px;
     flex-flow: column;
 		background: #fff;
-		max-width: 180px;
-		max-height: 180px;
+		width: 120px;
+		height: 120px;
     justify-content: center;
     border: 3px solid #000;
     border-radius: 50%;
@@ -80,11 +83,10 @@
 .card{
   display: flex;
   flex-flow: column wrap;
-  flex-basis: 85%;
-	max-width: 250px;
+	max-width: 200px;
 	height: 300px;
   align-items: center;
-	margin: 35px 15px 0px 15px;
+	margin: 45px 10px 0px 10px;
 
 	& .desc {
 		padding: 5px;
@@ -95,7 +97,7 @@
 		border: 3px solid #000;
 		border-radius: 5px;
 		margin-bottom:  15px;
-		min-width: 100px;
+		min-width: 120px;
 		&:hover {
 			box-shadow: 8px 8px;
 		}
@@ -127,22 +129,25 @@
     }
   }
   .card{
-    flex-basis: 33%;
-    flex-grow: 1;
+		max-width: 250px;
     text-align: center;
   }
   .project-label{
     flex-basis: 20%;
     flex-grow: 1;
     text-align: center;
+		justify-content: center;
   }
 }
 
 @media #{$charmander}{
-	.projects{
-		justify-content: center;
-		& .cards{
-			flex-flow: column;
+ .cards{
+		flex-flow: column;
+		& .card {
+			width: 95%;
+			& .desc {
+				width: 90%;
+			}
 		}
 	}
 }

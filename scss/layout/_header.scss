@@ -9,6 +9,10 @@
 //   margin: 0;
 // }
 
+body {
+	margin: 0px;
+}
+
 .wrapper{
   margin: 0;
   width: 100%;
@@ -20,6 +24,7 @@ nav{
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+	color: $primary;
 }
 
 .logo{
@@ -42,8 +47,7 @@ nav{
     list-style: none;
     justify-content: space-between;
     & a{
-      color: black;
-      text-transform: uppercase;
+      color: white;
       margin: 0 1em;
       font-style: bold;
     }

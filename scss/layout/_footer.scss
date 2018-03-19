@@ -6,7 +6,7 @@
     text-align: center;
   }
   width: 100vw;
-  background-color:$secondary;
+  background-color:$primary;
   color: #fff;
   display: flex;
   flex-flow: column wrap;
@@ -18,12 +18,25 @@
     padding: 0;
     & img {
       max-width: 50px;
+			&:hover{
+				transform: skew(-8deg, -8deg);
+			}
     }
+		& a:hover{
+			font-style: italic;
+		}
   }
   & ul:first-of-type{
-
     flex-flow: column wrap;
     align-items: center;
-
+		& a {
+			text-decoration: underline;
+			color: white;
+		}
+  }
+  & ul:last-of-type{
+    & li {
+			margin-right: 10px;
+		}
   }
 }

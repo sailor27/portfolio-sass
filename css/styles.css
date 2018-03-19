@@ -31,8 +31,8 @@ button {
   position: relative; }
   button:hover {
     background-color: #00000070;
-    color: #589CB3;
-    text-shadow: 1.25px 1.25px #FFF; }
+    color: #FFF;
+    text-shadow: 1.25px 1.25px #589CB3; }
   button:hover:before, button:hover:after {
     width: calc(100% + 12px);
     height: calc(100% + 12px); }
@@ -40,8 +40,8 @@ button {
     content: '';
     position: absolute;
     display: block;
-    width: 0.25em;
-    height: 0.25em;
+    width: 0.35em;
+    height: 0.35em;
     border: 3px solid #C074C0;
     transition: all 0.3s ease-in-out; }
   button:before {
@@ -57,6 +57,9 @@ button {
   button {
     width: 30%; } }
 /* For testing only */
+body {
+  margin: 0px; }
+
 .wrapper {
   margin: 0;
   width: 100%; }
@@ -66,7 +69,8 @@ nav {
   height: 20%;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between; }
+  justify-content: space-between;
+  color: #589CB3; }
 
 .logo {
   text-align: center;
@@ -86,8 +90,7 @@ nav {
     list-style: none;
     justify-content: space-between; }
     .links ul a {
-      color: black;
-      text-transform: uppercase;
+      color: white;
       margin: 0 1em;
       font-style: bold; }
 
@@ -151,6 +154,8 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: cover; }
+  .featured h1 {
+    font-size: 2.5em; }
   .featured h3 {
     font-size: 1.5em; }
   .featured h5 {
@@ -167,14 +172,14 @@ nav {
     background-color: #F9D74F; }
 
 #angular {
-  background-color: #d097d0; }
+  background-color: #7bb1c3; }
   #angular .desc {
-    background-color: #C074C0; }
+    background-color: #589CB3; }
 
 #sass {
-  background-color: #7bb1c3; }
+  background-color: #d097d0; }
   #sass .desc {
-    background-color: #589CB3; }
+    background-color: #C074C0; }
 
 .projects {
   width: 80%;
@@ -190,8 +195,8 @@ nav {
     padding: 3px;
     flex-flow: column;
     background: #fff;
-    max-width: 180px;
-    max-height: 180px;
+    width: 120px;
+    height: 120px;
     justify-content: center;
     border: 3px solid #000;
     border-radius: 50%; }
@@ -212,11 +217,10 @@ nav {
 .card {
   display: flex;
   flex-flow: column wrap;
-  flex-basis: 85%;
-  max-width: 250px;
+  max-width: 200px;
   height: 300px;
   align-items: center;
-  margin: 35px 15px 0px 15px; }
+  margin: 45px 10px 0px 10px; }
   .card .desc {
     padding: 5px;
     border-radius: 5px; }
@@ -225,7 +229,7 @@ nav {
     border: 3px solid #000;
     border-radius: 5px;
     margin-bottom: 15px;
-    min-width: 100px; }
+    min-width: 120px; }
     .card .link:hover {
       box-shadow: 8px 8px; }
     .card .link h5 {
@@ -245,22 +249,24 @@ nav {
     font-size: 1.75em; }
 
   .card {
-    flex-basis: 33%;
-    flex-grow: 1;
+    max-width: 250px;
     text-align: center; }
 
   .project-label {
     flex-basis: 20%;
     flex-grow: 1;
-    text-align: center; } }
+    text-align: center;
+    justify-content: center; } }
 @media only screen and (min-width: 480px) and (max-width 769px) {
-  .projects {
-    justify-content: center; }
-    .projects .cards {
-      flex-flow: column; } }
+  .cards {
+    flex-flow: column; }
+    .cards .card {
+      width: 95%; }
+      .cards .card .desc {
+        width: 90%; } }
 .footer {
   width: 100vw;
-  background-color: #C074C0;
+  background-color: #589CB3;
   color: #fff;
   display: flex;
   flex-flow: column wrap;
@@ -275,8 +281,17 @@ nav {
     padding: 0; }
     .footer ul img {
       max-width: 50px; }
+      .footer ul img:hover {
+        transform: skew(-8deg, -8deg); }
+    .footer ul a:hover {
+      font-style: italic; }
   .footer ul:first-of-type {
     flex-flow: column wrap;
     align-items: center; }
+    .footer ul:first-of-type a {
+      text-decoration: underline;
+      color: white; }
+  .footer ul:last-of-type li {
+    margin-right: 10px; }
 
 /*# sourceMappingURL=styles.css.map */
