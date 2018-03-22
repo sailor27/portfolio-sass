@@ -3,7 +3,8 @@
   font-family: 'League-Spartan-Bold';
   src: url(../assets/fonts/LeagueSpartan-Bold.otf) format("opentype"); }
 h1, h2, h3 {
-  font-family: "League-Spartan-Bold", sans-serif; }
+  font-family: "League-Spartan-Bold", sans-serif;
+  text-align: center; }
 
 h4 {
   font-family: "Lato", sans-serif;
