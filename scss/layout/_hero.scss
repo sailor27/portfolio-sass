@@ -1,34 +1,65 @@
-.hero{
-  height: 50%;
-	margin: 120px 15px 10px 15px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-  justify-content: space-around;
-
-  & > h1, h5{
-    text-align: center;
-		color: #FFF;
-		margin: 0px;
-  }
-  & h1{
-    font-size: 4.75em;
-    animation: fadeIn 500ms ease initial;
-  }
-  & h5{
-    font-size: 1.5em;
-  }
-}
 
 
 @media #{$charmeleon}{
-  .hero h1{
-      font-size: 5em;
+    .hero{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  
+    .name {
+      display: flex;
+      font-size: 1.75em;
+      text-align: center;
+      color: #FFF;
+      margin: 0px;
+      animation: fadeIn 500ms ease initial;
     }
-  .hero h5{
-      font-size: 2em;
+
+    .subheader{
+      display: flex;
+      height: 40%;
+      flex-flow: column nowrap;
+      justify-content: space-evenly;
+      color: #FFF;
+      & h5 {
+        text-align: center;
+        margin: 0px 2%;
+      }
+      .title, .tagline{
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+
+//smallest size phones, inherits from charmeleon if not specified
+@media #{$charmander}{
+  .hero{
+    .name {
+      font-size: 1.25em;
+    }
+    .subheader{
+      .title{
+        font-size: 1.5em;
+      }
+      .tagline{
+        font-size: 1em;
+      }
+    }
+  }
+}
+
+//desktop size, inherits from charmeleon if not specified
+@media #{$charizard}{
+    .subheader{
+      .title, .tagline{
+        font-size: 1.75em;
+      }
     }
 }
+
 
 @keyframes fadeIn {
   0% {

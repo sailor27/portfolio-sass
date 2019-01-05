@@ -3,7 +3,8 @@
   font-family: 'League-Spartan-Bold';
   src: url(../assets/fonts/LeagueSpartan-Bold.otf) format("opentype"); }
 h1, h2, h3 {
-  font-family: "League-Spartan-Bold", sans-serif; }
+  font-family: "League-Spartan-Bold", sans-serif;
+  text-align: center; }
 
 h4 {
   font-family: "Lato", sans-serif;
@@ -53,10 +54,17 @@ button {
     right: -7px;
     border-width: 0 2px 2px 0; }
 
-@media only screen and (min-width: 770px) {
+@media (max-width: 374px) {
   button {
-    width: 30%; } }
+    width: 70%; } }
+@media (max-width: 998px) {
+  button {
+    width: 70%; } }
 /* For testing only */
+html > * {
+  box-sizing: border-box;
+  margin: 0; }
+
 body {
   margin: 0px; }
 
@@ -94,9 +102,9 @@ nav {
       margin: 0 1em;
       font-style: bold; }
 
-.grow li:hover {
+.grow:hover {
   animation: growIn 1s ease-in-out; }
-  .grow li:hover a {
+  .grow:hover a {
     color: #0ac2ff;
     background-color: #000; }
 
@@ -116,29 +124,41 @@ nav {
     opacity: 1; }
   100% {
     transform: scale(1); } }
-.hero {
-  height: 50%;
-  margin: 120px 15px 10px 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around; }
-  .hero > h1, .hero h5 {
-    text-align: center;
-    color: #FFF;
-    margin: 0px; }
-  .hero h1 {
-    font-size: 4.75em;
-    animation: fadeIn 500ms ease initial; }
-  .hero h5 {
+@media (max-width: 998px) {
+  .hero {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; }
+    .hero .name {
+      display: flex;
+      font-size: 1.75em;
+      text-align: center;
+      color: #FFF;
+      margin: 0px;
+      animation: fadeIn 500ms ease initial; }
+    .hero .subheader {
+      display: flex;
+      height: 40%;
+      flex-flow: column nowrap;
+      justify-content: space-evenly;
+      color: #FFF; }
+      .hero .subheader h5 {
+        text-align: center;
+        margin: 0px 2%; }
+      .hero .subheader .title, .hero .subheader .tagline {
+        font-size: 1.5em; } }
+@media (max-width: 374px) {
+  .hero .name {
+    font-size: 1.25em; }
+  .hero .subheader .title {
     font-size: 1.5em; }
-
-@media only screen and (min-width: 770px) {
-  .hero h1 {
-    font-size: 5em; }
-
-  .hero h5 {
-    font-size: 2em; } }
+  .hero .subheader .tagline {
+    font-size: 1em; } }
+@media (min-width: 767px) {
+  .subheader .title, .subheader .tagline {
+    font-size: 1.75em; } }
 @keyframes fadeIn {
   0% {
     opacity: 0; }
@@ -241,7 +261,7 @@ nav {
   .card:hover .icon {
     border: 3px solid #C074C0; }
 
-@media only screen and (min-width: 770px) {
+@media (max-width: 998px) {
   .featured h5 {
     font-size: 1.25em; }
   .featured h3 {
@@ -256,7 +276,7 @@ nav {
     flex-grow: 1;
     text-align: center;
     justify-content: center; } }
-@media only screen and (min-width: 480px) and (max-width 769px) {
+@media (max-width: 374px) {
   .cards {
     flex-flow: column; }
     .cards .card {
