@@ -1,5 +1,5 @@
 $(function() {
-  
+
   $(document).ready(function(){
     const vph = window.innerHeight;
     console.log("height:", vph);
@@ -8,11 +8,11 @@ $(function() {
      })
   })
 
-	 $('.scroll-down').click (function() {
-		 console.log('🎉');
-		 $('html, body').animate({scrollTop: $(".featured").offset().top }, 'slow');
-		 return false;
-   });
+	//  $('.scroll-down').click (function() {
+	// 	 console.log('🎉');
+	// 	 $('html, body').animate({scrollTop: $(".featured").offset().top }, 'slow');
+	// 	 return false;
+  //  });
    
 
  });
