@@ -10,11 +10,10 @@ $(function() {
 
 	 $('.scroll-down').click (function() {
      console.log('🎉');
-    //  $('.featured').css({
-    //    "display": "flex"
-    //  });
-     $('html, body').animate({ scrollTop: $(".featured").offset().top.innerHeight}, 'slow');
-     console.log(top.innerHeight)
+     $('.featured').css({
+       "display": "flex"
+     });
+     $('html, body').animate({ scrollTop: $(".featured").offset().top}, 'slow');
 		 return false;
    });
    
