@@ -8,11 +8,15 @@ $(function() {
      })
   })
 
-	//  $('.scroll-down').click (function() {
-	// 	 console.log('🎉');
-	// 	 $('html, body').animate({scrollTop: $(".featured").offset().top }, 'slow');
-	// 	 return false;
-  //  });
+	 $('.scroll-down').click (function() {
+     console.log('🎉');
+    //  $('.featured').css({
+    //    "display": "flex"
+    //  });
+     $('html, body').animate({ scrollTop: $(".featured").offset().top.innerHeight}, 'slow');
+     console.log(top.innerHeight)
+		 return false;
+   });
    
 
  });
